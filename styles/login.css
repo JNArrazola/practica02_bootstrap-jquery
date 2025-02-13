@@ -1,0 +1,14 @@
+body {
+    background-color: #f7f7f7;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+  .container {
+    max-width: 400px;
+  }
+  .btn-login {
+    border-radius: 25px;
+  }
+  .alert {
+    margin-top: 10px;
+  }
