@@ -8,15 +8,58 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     body {
-      background-color: #f7f7f7;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: #333;
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .container {
-      max-width: 500px;
+      max-width: 600px;
+    }
+    .card {
+      background-color: #242424;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .card h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .form-label {
+      color: #ffffff;
+    }
+    .form-control,
+    .form-select {
+      background-color: #333333;
+      border: 1px solid #555555;
+      color: #ffffff;
+    }
+    .form-control:focus,
+    .form-select:focus {
+      border-color: #777777;
+      box-shadow: none;
+      background-color: #3a3a3a;
+    }
+    .form-control::placeholder {
+      color: #cccccc;
+      opacity: 1;
     }
     .btn-submit {
       border-radius: 25px;
+      background-color: #3a3a3a;
+      border: none;
+    }
+    .btn-submit:hover {
+      background-color: #555555;
+    }
+    a {
+      color: #3a8ee6;
+    }
+    a:hover {
+      color: #5aa3f1;
     }
     .alert {
       margin-top: 10px;
@@ -24,58 +67,60 @@
   </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">Registro de Usuario</h2>
-    <form id="registroForm">
-      <div class="mb-3">
-        <label for="username" class="form-label">Usuario *</label>
-        <input type="text" class="form-control" id="username" name="username" placeholder="Ingresa tu usuario">
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Contraseña *</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña">
-      </div>
-      <div class="mb-3">
-        <label for="confirmPassword" class="form-label">Confirmar Contraseña *</label>
-        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirma tu contraseña">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email *</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu email">
-      </div>
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre *</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-      </div>
-      <div class="mb-3">
-        <label for="apellidos" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos">
-      </div>
-      <div class="mb-3">
-        <label for="genero" class="form-label">Género *</label>
-        <select class="form-select" id="genero" name="genero">
-          <option value="">[Seleccione]</option>
-          <option value="Hombre">Hombre</option>
-          <option value="Mujer">Mujer</option>
-          <option value="No Aplica">No Aplica</option>
-          <option value="Prefiero no Decirlo">Prefiero no Decirlo</option>
-          <option value="Otro">Otro</option>
-        </select>
-      </div>
-      <div class="mb-3 d-none" id="otroGeneroContainer">
-        <label for="otroGenero" class="form-label">Especifique género</label>
-        <input type="text" class="form-control" id="otroGenero" name="otroGenero" placeholder="Especifique su género">
-      </div>
-      <div class="mb-3">
-        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento *</label>
-        <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
-      </div>
-      <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-primary btn-submit">Registrarse</button>
-      </div>
-      <div id="errorMsg" class="alert alert-danger d-none" role="alert"></div>
-      <div id="successMsg" class="alert alert-success d-none" role="alert">Registro completado exitosamente.</div>
-    </form>
+  <div class="container">
+    <div class="card">
+      <h2 class="text-center mb-4">Registro de Usuario</h2>
+      <form id="registroForm">
+        <div class="mb-3">
+          <label for="username" class="form-label">Usuario *</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Ingresa tu usuario">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña *</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña">
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirmar Contraseña *</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirma tu contraseña">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu email">
+        </div>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre *</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+        </div>
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos">
+        </div>
+        <div class="mb-3">
+          <label for="genero" class="form-label">Género *</label>
+          <select class="form-select" id="genero" name="genero">
+            <option value="">[Seleccione]</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value="No Aplica">No Aplica</option>
+            <option value="Prefiero no Decirlo">Prefiero no Decirlo</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="mb-3 d-none" id="otroGeneroContainer">
+          <label for="otroGenero" class="form-label">Especifique género</label>
+          <input type="text" class="form-control" id="otroGenero" name="otroGenero" placeholder="Especifique su género">
+        </div>
+        <div class="mb-3">
+          <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento *</label>
+          <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary btn-submit">Registrarse</button>
+        </div>
+        <div id="errorMsg" class="alert alert-danger d-none" role="alert"></div>
+        <div id="successMsg" class="alert alert-success d-none" role="alert">Registro completado exitosamente.</div>
+      </form>
+    </div>
   </div>
 
   <script>
@@ -102,55 +147,31 @@
         var otroGenero = $("#otroGenero").val().trim();
         var fechaNacimiento = $("#fechaNacimiento").val();
         
-        if (username === "") {
-          errors.push("Usuario");
-        }
-        if (password === "") {
-          errors.push("Contraseña");
-        }
-        if (confirmPassword === "") {
-          errors.push("Confirmar Contraseña");
-        }
-        if (email === "") {
-          errors.push("Email");
-        }
-        if (nombre === "") {
-          errors.push("Nombre");
-        }
-        if (genero === "") {
-          errors.push("Género");
-        }
-        if (fechaNacimiento === "") {
-          errors.push("Fecha de Nacimiento");
-        }
+        if (username === "") { errors.push("Usuario"); }
+        if (password === "") { errors.push("Contraseña"); }
+        if (confirmPassword === "") { errors.push("Confirmar Contraseña"); }
+        if (email === "") { errors.push("Email"); }
+        if (nombre === "") { errors.push("Nombre"); }
+        if (genero === "") { errors.push("Género"); }
+        if (fechaNacimiento === "") { errors.push("Fecha de Nacimiento"); }
         
-        if (password !== "" && confirmPassword !== "" && password !== confirmPassword) {
-          errors.push("Las contraseñas no coinciden");
-        }
+        if (password !== "" && confirmPassword !== "" && password !== confirmPassword) { errors.push("Las contraseñas no coinciden"); }
         
         if (email !== "") {
           var atIndex = email.indexOf("@");
           var dotIndex = email.lastIndexOf(".");
-          if (atIndex < 1 || dotIndex < atIndex + 2 || dotIndex === email.length - 1) {
-            errors.push("Email no válido");
-          }
+          if (atIndex < 1 || dotIndex < atIndex + 2 || dotIndex === email.length - 1) { errors.push("Email no válido"); }
         }
         
-        if (genero === "Otro" && otroGenero === "") {
-          errors.push("Especifique su género");
-        }
+        if (genero === "Otro" && otroGenero === "") { errors.push("Especifique su género"); }
         
         if (fechaNacimiento !== "") {
           var birthDate = new Date(fechaNacimiento);
           var today = new Date();
           var age = today.getFullYear() - birthDate.getFullYear();
           var monthDiff = today.getMonth() - birthDate.getMonth();
-          if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-          }
-          if (age < 18) {
-            errors.push("Debes tener al menos 18 años");
-          }
+          if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) { age--; }
+          if (age < 18) { errors.push("Debes tener al menos 18 años"); }
         }
         
         if (errors.length > 0) {
@@ -159,16 +180,12 @@
         } else {
           $("#errorMsg").addClass("d-none");
           $("#successMsg").removeClass("d-none").text("Registro completado exitosamente.");
-
-            setTimeout(function() {
-              window.location.href = "login.html";
-            }, 2000);
+          setTimeout(function() { window.location.href = "login.html"; }, 2000);
         }
       });
     });
   </script>
 
-  <!-- Bootstrap Bundle JS con Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
