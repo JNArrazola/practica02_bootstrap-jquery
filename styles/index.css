@@ -3,7 +3,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
   }
-  /* Navbar */
+  
   .navbar {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -27,7 +27,7 @@ body {
     background-color: #0056b3;
     color: #fff;
   }
-  /* Sección Hero */
+
   .hero {
     text-align: center;
     padding: 4rem 0;
@@ -40,7 +40,7 @@ body {
     font-size: 1.2rem;
     color: #666;
   }
-  /* Tarjetas de contenido */
+
   .card {
     border: none;
     border-radius: 15px;
